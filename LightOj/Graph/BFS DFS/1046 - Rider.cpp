@@ -66,7 +66,7 @@ bool mark[15] [15];
 bool valid(int x, int y){
     return x >= 0 and x < height and y >= 0 and y < width and mark[x] [y];
 }
-void dijkstra(int x, int y, int knightNum, int c){
+void bfs(int x, int y, int knightNum, int c){
     int Ncost, jLeft;
     for(int i = 0; i < height; i++){
         for(int j = 0; j < width; j++)
@@ -121,7 +121,7 @@ int main(){
             }
         }
         for(int i = 0; i < v.size(); i++)
-            dijkstra(v[i].x, v[i].y, v[i].canJump, i);
+            bfs(v[i].x, v[i].y, v[i].canJump, i);
         i64 ans = inf;
         for(int i = 0; i < height; i++){
             for(int j = 0; j < width; j++){
