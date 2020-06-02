@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-	auto eulers_totient =[](long long int n){
+    auto eulers_totient =[](long long int n){
     	long long int co_prime = n;
     	for(int i = 2; i * i <= n; i++)
     		if(!(n % i)){
